@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore popular movie franchises, including Marvel, Star Wars, Harry Potter, and more, with a searchable list of films and series.">
+  <meta name="keywords" content="movie franchises, Marvel, Star Wars, Harry Potter, James Bond, cinema, film series">
+  <meta property="og:title" content="Popular Movie Franchises - @IncomingTimes">
+  <meta property="og:description" content="A comprehensive list of popular movie franchises with search functionality.">
+  <meta property="og:type" content="website">
+  <title>Popular Movie Franchises - @IncomingTimes</title>
+  <style>
+    body{font-family:Arial,sans-serif;margin:20px;background-color:#f9f9f9;}
+    h1{text-align:center;margin-bottom:20px;}
+    .search-container{text-align:center;margin-bottom:20px;}
+    #searchBar{width:80%;max-width:600px;padding:10px;font-size:16px;border:1px solid #ccc;border-radius:5px;}
+    .franchise{background-color:white;margin-bottom:10px;border-radius:5px;box-shadow:0 0 5px rgba(0,0,0,0.1);}
+    summary{font-size:18px;font-weight:bold;padding:12px 20px;cursor:pointer;outline:none;transition:background-color 0.2s;}
+    summary:hover{background-color:#f0f0f0;}
+    details[open] summary{background-color:#e2e2e2;}
+    .movie-list{padding:10px 40px 20px;font-size:15px;line-height:1.4;}
+    .notes{margin-top:10px;font-style:italic;color:#555;}
+    footer{text-align:center;margin-top:30px;font-size:0.9em;}
+    footer a{color:#1da1f2;text-decoration:none;font-weight:bold;}
+    footer a:hover{text-decoration:underline;}
+    .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;}
+    @media (max-width:600px){
+      #searchBar{width:90%;font-size:14px;}
+      summary{font-size:16px;}
+      .movie-list{font-size:13px;padding:10px 20px;}
+    }
+  </style>
+  <script>
+    function debounce(func,wait){let timeout;return function executedFunction(...args){const later=()=>{clearTimeout(timeout);func(...args);};clearTimeout(timeout);timeout=setTimeout(later,wait);};}
+    const filterFranchises=debounce(function(){const filter=document.getElementById('searchBar').value.toLowerCase().trim().replace(/[.*+?^${}()|[\]\\]/g,'\\$&');const franchises=document.querySelectorAll('.franchise');franchises.forEach(franchise=>{const summary=franchise.querySelector('summary').textContent.toLowerCase();const movies=franchise.querySelector('.movie-list').textContent.toLowerCase();franchise.style.display=(summary.includes(filter)||movies.includes(filter))?'':'none';});},300);
+  </script>
+</head>
+<body>
+  <h1>Popular Movie Franchises</h1>
+  <div class="search-container">
+    <label for="searchBar" class="visually-hidden">Search franchises or movies</label>
+    <input type="text" id="searchBar" onkeyup="filterFranchises()" placeholder="Search franchises or movies..." aria-label="Search franchises or movies">
+  </div>
+
+  <details class="franchise">
+    <summary tabindex="0">Marvel Cinematic Universe</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Iron Man (2008)</li>
+        <li>The Incredible Hulk (2008)</li>
+        <li>Iron Man 2 (2010)</li>
+        <li>Thor (2011)</li>
+        <li>Captain America: The First Avenger (2011)</li Hawkins>
+        <li>Marvel's The Avengers (2012)</li>
+        <li>Iron Man 3 (2013)</li>
+        <li>Thor: The Dark World (2013)</li>
+        <li>Captain America: The Winter Soldier (2014)</li>
+        <li>Guardians of the Galaxy (2014)</li>
+        <li>Avengers: Age of Ultron (2015)</li>
+        <li>Ant-Man (2015)</li>
+        <li>Captain America: Civil War (2016)</li>
+        <li>Doctor Strange (2016)</li>
+        <li>Guardians of the Galaxy Vol. 2 (2017)</li>
+        <li>Spider-Man: Homecoming (2017)</li>
+        <li>Thor: Ragnarok (2017)</li>
+        <li>Black Panther (2018)</li>
+        <li>Avengers: Infinity War (2018)</li>
+        <li>Ant-Man and the Wasp (2018)</li>
+        <li>Captain Marvel (2019)</li>
+        <li>Avengers: Endgame (2019)</li>
+        <li>Spider-Man: Far From Home (2019)</li>
+        <li>WandaVision (2021) – TV Series</li>
+        <li>The Falcon and the Winter Soldier (2021) – TV Series</li>
+        <li>Loki Season 1 (2021) – TV Series</li>
+        <li>Black Widow (2021)</li>
+        <li>What If...? Season 1 (2021) – Animated Series</li>
+        <li>Shang-Chi and the Legend of the Ten Rings (2021)</li>
+        <li>Eternals (2021)</li>
+        <li>Hawkeye (2021) – TV Series</li>
+        <li>Spider-Man: No Way Home (2021)</li>
+        <li>Moon Knight (2022) – TV Series</li>
+        <li>Doctor Strange in the Multiverse of Madness (2022)</li>
+        <li>Ms. Marvel (2022) – TV Series</li>
+        <li>Thor: Love and Thunder (2022)</li>
+        <li>I Am Groot (2022) – Animated Shorts</li>
+        <li>She-Hulk: Attorney at Law (2022) – TV Series</li>
+        <li>Werewolf by Night (2022) – TV Special</li>
+        <li>The Guardians of the Galaxy Holiday Special (2022) – TV Special</li>
+        <li>Ant-Man and the Wasp: Quantumania (2023)</li>
+        <li>Secret Invasion (2023) – TV Series</li>
+        <li>Guardians of the Galaxy Vol. 3 (2023)</li>
+        <li>Loki Season 2 (2023) – TV Series</li>
+        <li>The Marvels (2023)</li>
+        <li>Echo (2024) – TV Series</li>
+        <li>Deadpool & Wolverine (2024)</li>
+        <li>Agatha: Darkhold Diaries (2024) – TV Series</li>
+        <li>Captain America: Brave New World (2025)</li>
+        <li>Daredevil: Born Again (2025) – TV Series</li>
+        <li>Ironheart (2025) – TV Series</li>
+        <li>Thunderbolts (2025)</li>
+        <li>Blade (2025)</li>
+        <li>Spider-Man: Freshman Year (2025) – Animated Series</li>
+        <li>Marvel Zombies (2025) – Animated Series</li>
+        <li>Eyes of Wakanda (2025) – Animated Series</li>
+      </ul>
+      <div class="notes">Upcoming projects: Captain America: Brave New World (2025), Thunderbolts (2025), Blade (2025), and more. Note: Phases 1 to 5 included. MCU is a connected universe, with TV series linked to movie storylines.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Spider-Man</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Spider-Man (2002) – Sam Raimi Trilogy</li>
+        <li>Spider-Man 2 (2004)</li>
+        <li>Spider-Man 3 (2007)</li>
+        <li>The Amazing Spider-Man (2012) – Marc Webb Reboot</li>
+        <li>The Amazing Spider-Man 2 (2014)</li>
+        <li>Spider-Man: Homecoming (2017) – MCU Version</li>
+        <li>Spider-Man: Far From Home (2019)</li>
+        <li>Spider-Man: No Way Home (2021)</li>
+        <li>Spider-Man: Across the Spider-Verse (2023) – Animated</li>
+        <li>Spider-Man: Beyond the Spider-Verse (2024) – Animated</li>
+      </ul>
+      <div class="notes">Sony's Spider-Man films started with Raimi trilogy, rebooted by Marc Webb, then integrated into MCU starting with 'Homecoming'. Animated 'Spider-Verse' is separate continuity. 'Spider-Man: Beyond the Spider-Verse' released in 2024.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Star Wars</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Star Wars: Episode IV – A New Hope (1977)</li>
+        <li>Star Wars: Episode V – The Empire Strikes Back (1980)</li>
+        <li>Star Wars: Episode VI – Return of the Jedi (1983)</li>
+        <li>Star Wars: Episode I – The Phantom Menace (1999)</li>
+        <li>Star Wars: Episode II – Attack of the Clones (2002)</li>
+        <li>Star Wars: Episode III – Revenge of the Sith (2005)</li>
+        <li>Star Wars: The Clone Wars (2008) – Animated Film</li>
+        <li>Star Wars: The Clone Wars (2008–2020) – TV Series</li>
+        <li>Star Wars: Episode VII – The Force Awakens (2015)</li>
+        <li>Star Wars: Episode VIII – The Last Jedi (2017)</li>
+        <li>Star Wars: Episode IX – The Rise of Skywalker (2019)</li>
+        <li>The Mandalorian (2019–present) – TV Series</li>
+        <li>The Book of Boba Fett (2021) – TV Series</li>
+        <li>Obi-Wan Kenobi (2022) – TV Series</li>
+        <li>Andor (2022–2023) – TV Series</li>
+        <li>Star Wars: Visions (2021–2023) – Animated Anthology</li>
+        <li>Rogue One: A Star Wars Story (2016)</li>
+        <li>Solo: A Star Wars Story (2018)</li>
+      </ul>
+      <div class="notes">Note: Original trilogy (Episodes IV–VI), Prequel trilogy (Episodes I–III), Sequel trilogy (Episodes VII–IX), plus multiple TV series and standalone movies. The TV shows expand the universe significantly.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Wizarding World</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Harry Potter and the Sorcerer’s Stone (2001)</li>
+        <li>Harry Potter and the Chamber of Secrets (2002)</li>
+        <li>Harry Potter and the Prisoner of Azkaban (2004)</li>
+        <li>Harry Potter and the Goblet of Fire (2005)</li>
+        <li>Harry Potter and the Order of the Phoenix (2007)</li>
+        <li>Harry Potter and the Half-Blood Prince (2009)</li>
+        <li>Harry Potter and the Deathly Hallows – Part 1 (2010)</li>
+        <li>Harry Potter and the Deathly Hallows – Part 2 (2011)</li>
+        <li>Fantastic Beasts and Where to Find Them (2016)</li>
+        <li>Fantastic Beasts: The Crimes of Grindelwald (2018)</li>
+        <li>Fantastic Beasts: The Secrets of Dumbledore (2022)</li>
+      </ul>
+      <div class="notes">Note: The Harry Potter films cover the original story, while Fantastic Beasts is a prequel series expanding the Wizarding World universe.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">007 (James Bond)</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Dr. No (1962)</li>
+        <li>From Russia with Love (1963)</li>
+        <li>Goldfinger (1964)</li>
+        <li>Thunderball (1965)</li>
+        <li>You Only Live Twice (1967)</li>
+        <li>On Her Majesty’s Secret Service (1969)</li>
+        <li>Diamonds Are Forever (1971)</li>
+        <li>Live and Let Die (1973)</li>
+        <li>The Man with the Golden Gun (1974)</li>
+        <li>The Spy Who Loved Me (1977)</li>
+        <li>Moonraker (1979)</li>
+        <li>For Your Eyes Only (1981)</li>
+        <li>Octopussy (1983)</li>
+        <li>A View to a Kill (1985)</li>
+        <li>The Living Daylights (1987)</li>
+        <li>Licence to Kill (1989)</li>
+        <li>GoldenEye (1995)</li>
+        <li>Tomorrow Never Dies (1997)</li>
+        <li>The World Is Not Enough (1999)</li>
+        <li>Die Another Day (2002)</li>
+        <li>Casino Royale (2006)</li>
+        <li>Quantum of Solace (2008)</li>
+        <li>Skyfall (2012)</li>
+        <li>Spectre (2015)</li>
+        <li>No Time to Die (2021)</li>
+      </ul>
+      <div class="notes">James Bond franchise rebooted with Daniel Craig starting in 2006’s Casino Royale. No direct connection with earlier Bonds’ continuity.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">X-Men</summary>
+    <section class="movie-list">
+      <ul>
+        <li>X-Men (2000)</li>
+        <li>X2: X-Men United (2003)</li>
+        <li>X-Men: The Last Stand (2006)</li>
+        <li>X-Men Origins: Wolverine (2009)</li>
+        <li>X-Men: First Class (2011)</li>
+        <li>The Wolverine (2013)</li>
+        <li>X-Men: Days of Future Past (2014)</li>
+        <li>Deadpool (2016)</li>
+        <li>X-Men: Apocalypse (2016)</li>
+        <li>Logan (2017)</li>
+        <li>Deadpool 2 (2018)</li>
+        <li>X-Men: Dark Phoenix (2019)</li>
+        <li>The New Mutants (2020)</li>
+      </ul>
+      <div class="notes">Note: The franchise includes prequels and timeline shifts. The Deadpool films are loosely connected. After Disney’s acquisition of Fox, some X-Men will integrate into MCU in the future.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Fast & Furious</summary>
+    <section class="movie-list">
+      <ul>
+        <li>The Fast and the Furious (2001)</li>
+        <li>2 Fast 2 Furious (2003)</li>
+        <li>The Fast and the Furious: Tokyo Drift (2006)</li>
+        <li>Fast & Furious (2009)</li>
+        <li>Fast Five (2011)</li>
+        <li>Fast & Furious 6 (2013)</li>
+        <li>Furious 7 (2015)</li>
+        <li>The Fate of the Furious (2017)</li>
+        <li>F9 (2021)</li>
+        <li>Fast X (2023)</li>
+      </ul>
+      <div class="notes">Note: Tokyo Drift timeline is between films 6 and 7. The franchise is known for action-packed, car-centric stories.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">DC Extended Universe (DCEU)</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Man of Steel (2013)</li>
+        <li>Batman v Superman: Dawn of Justice (2016)</li>
+        <li>Suicide Squad (2016)</li>
+        <li>Wonder Woman (2017)</li>
+        <li>Justice League (2017)</li>
+        <li>Aquaman (2018)</li>
+        <li>Shazam! (2019)</li>
+        <li>Birds of Prey (2020)</li>
+        <li>Wonder Woman 1984 (2020)</li>
+        <li>Zack Snyder’s Justice League (2021) – Director’s Cut</li>
+        <li>The Suicide Squad (2021)</li>
+        <li>Black Adam (2022)</li>
+        <li>Shazam! Fury of the Gods (2023)</li>
+        <li>Untitled DC Project (Upcoming)</li>
+      </ul>
+      <div class="notes">DCEU is a shared universe with some movies rebooted or retconned. New DC Universe plans to reset continuity with upcoming films.</div>
+    </section>
+  </details>
+  
+  <details class="franchise">
+  <summary tabindex="0">Men in Black</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Men in Black (1997)</li>
+      <li>Men in Black II (2002)</li>
+      <li>Men in Black 3 (2012)</li>
+      <li>Men in Black: International (2019)</li>
+    </ul>
+    <div class="notes">A sci-fi comedy series about agents policing extraterrestrial activity. No 2025 releases are confirmed.</div>
+  </section>
+</details>
+
+  <details class="franchise">
+    <summary tabindex="0">Batman</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Batman (1989) – Tim Burton</li>
+        <li>Batman Returns (1992)</li>
+        <li>Batman Forever (1995)</li>
+        <li>Batman & Robin (1997)</li>
+        <li>Batman Begins (2005) – Nolan Trilogy</li>
+        <li>The Dark Knight (2008)</li>
+        <li>The Dark Knight Rises (2012)</li>
+        <li>Batman v Superman: Dawn of Justice (2016) – DCEU</li>
+        <li>Justice League (2017)</li>
+        <li>The Batman (2022) – Matt Reeves Reboot</li>
+      </ul>
+      <div class="notes">Multiple reboots exist. Nolan trilogy is standalone, Matt Reeves reboot unrelated to DCEU Batman played by Ben Affleck.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Jurassic Park</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Jurassic Park (1993)</li>
+        <li>The Lost World: Jurassic Park (1997)</li>
+        <li>Jurassic Park III (2001)</li>
+        <li>Jurassic World (2015)</li>
+        <li>Jurassic World: Fallen Kingdom (2018)</li>
+        <li>Jurassic World: Dominion (2022)</li>
+        <li>Jurassic World Rebirth (2025)</li>
+      </ul>
+      <div class="notes">The Jurassic World trilogy is a continuation of the original Jurassic Park series. Jurassic World Rebirth, released July 2, 2025, stars Scarlett Johansson and Jonathan Bailey.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Middle-earth (The Lord of the Rings & The Hobbit)</summary>
+    <section class="movie-list">
+      <ul>
+        <li>The Lord of the Rings: The Fellowship of the Ring (2001)</li>
+        <li>The Lord of the Rings: The Two Towers (2002)</li>
+        <li>The Lord of the Rings: The Return of the King (2003)</li>
+        <li>The Hobbit: An Unexpected Journey (2012)</li>
+        <li>The Hobbit: The Desolation of Smaug (2013)</li>
+        <li>The Hobbit: The Battle of the Five Armies (2014)</li>
+        <li>The Lord of the Rings: The Rings of Power (2022–present) – TV Series</li>
+      </ul>
+      <div class="notes">Movies based on J.R.R. Tolkien’s works; TV series is a prequel set thousands of years earlier.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Despicable Me</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Despicable Me (2010)</li>
+        <li>Despicable Me 2 (2013)</li>
+        <li>Minions (2015) – Prequel</li>
+        <li>Despicable Me 3 (2017)</li>
+        <li>Minions: The Rise of Gru (2022)</li>
+      </ul>
+      <div class="notes">No additional notes available.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Transformers</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Transformers (2007)</li>
+        <li>Transformers: Revenge of the Fallen (2009)</li>
+        <li>Transformers: Dark of the Moon (2011)</li>
+        <li>Transformers: Age of Extinction (2014)</li>
+        <li>Transformers: The Last Knight (2017)</li>
+        <li>Bumblebee (2018) – Spin-off/Prequel</li>
+        <li>Transformers: Rise of the Beasts (2023)</li>
+      </ul>
+      <div class="notes">No additional notes available.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Avatar</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Avatar (2009)</li>
+        <li>Avatar: The Way of Water (2022)</li>
+        <li>Avatar 3 (Upcoming)</li>
+        <li>Avatar 4 (Planned)</li>
+        <li>Avatar 5 (Planned)</li>
+      </ul>
+      <div class="notes">No additional notes available.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Pirates of the Caribbean</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Pirates of the Caribbean: The Curse of the Black Pearl (2003)</li>
+        <li>Pirates of the Caribbean: Dead Man’s Chest (2006)</li>
+        <li>Pirates of the Caribbean: At World’s End (2007)</li>
+        <li>Pirates of the Caribbean: On Stranger Tides (2011)</li>
+        <li>Pirates of the Caribbean: Dead Men Tell No Tales (2017)</li>
+      </ul>
+      <div class="notes">The franchise is known for its fantasy pirate adventures starring Johnny Depp.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Mission: Impossible</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Mission: Impossible (1996)</li>
+        <li>Mission: Impossible 2 (2000)</li>
+        <li>Mission: Impossible III (2006)</li>
+        <li>Mission: Impossible – Ghost Protocol (2011)</li>
+        <li>Mission: Impossible – Rogue Nation (2015)</li>
+        <li>Mission: Impossible – Fallout (2018)</li>
+        <li>Mission: Impossible – Dead Reckoning Part One (2023)</li>
+        <li>Mission: Impossible – The Final Reckoning (2025)</li>
+      </ul>
+      <div class="notes">Mission: Impossible – The Final Reckoning, released May 23, 2025, stars Tom Cruise and concludes the series’ arc.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Shrek</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Shrek (2001)</li>
+        <li>Shrek 2 (2004)</li>
+        <li>Shrek the Third (2007)</li>
+        <li>Shrek Forever After (2010)</li>
+        <li>Puss in Boots (2011) – Spin-off</li>
+        <li>Puss in Boots: The Last Wish (2022)</li>
+      </ul>
+      <div class="notes">No additional notes available.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">The Twilight Saga</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Twilight (2008)</li>
+        <li>The Twilight Saga: New Moon (2009)</li>
+        <li>The Twilight Saga: Eclipse (2010)</li>
+        <li>The Twilight Saga: Breaking Dawn – Part 1 (2011)</li>
+        <li>The Twilight Saga: Breaking Dawn – Part 2 (2012)</li>
+      </ul>
+      <div class="notes">No additional notes available.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">John Wick</summary>
+    <section class="movie-list">
+      <ul>
+        <li>John Wick (2014)</li>
+        <li>John Wick: Chapter 2 (2017)</li>
+        <li>John Wick: Chapter 3 – Parabellum (2019)</li>
+        <li>John Wick: Chapter 4 (2023)</li>
+        <li>From the World of John Wick: Ballerina (2025)</li>
+      </ul>
+      <div class="notes">From the World of John Wick: Ballerina, released June 6, 2025, stars Ana de Armas as Eve Macarro with Keanu Reeves reprising John Wick.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">The Matrix</summary>
+    <section class="movie-list">
+      <ul>
+        <li>The Matrix (1999)</li>
+        <li>The Matrix Reloaded (2003)</li>
+        <li>The Matrix Revolutions (2003)</li>
+        <li>The Matrix Resurrections (2021)</li>
+      </ul>
+      <div class="notes">Sci-fi franchise exploring reality and simulated worlds.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">The Incredibles</summary>
+    <section class="movie-list">
+      <ul>
+        <li>The Incredibles (2004)</li>
+        <li>Incredibles 2 (2018)</li>
+      </ul>
+      <div class="notes">No additional notes available.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Deadpool</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Deadpool (2016)</li>
+        <li>Deadpool 2 (2018)</li>
+      </ul>
+      <div class="notes">Originally part of X-Men franchise, these films have a comedic and violent tone.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">The Hunger Games</summary>
+    <section class="movie-list">
+      <ul>
+        <li>The Hunger Games (2012)</li>
+        <li>The Hunger Games: Catching Fire (2013)</li>
+        <li>The Hunger Games: Mockingjay – Part 1 (2014)</li>
+        <li>The Hunger Games: Mockingjay – Part 2 (2015)</li>
+      </ul>
+      <div class="notes">No additional notes available.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Frozen</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Frozen (2013)</li>
+        <li>Frozen II (2019)</li>
+      </ul>
+      <div class="notes">No additional notes available.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">The Lego Movie</summary>
+    <section class="movie-list">
+      <ul>
+        <li>The Lego Movie (2014)</li>
+        <li>The Lego Batman Movie (2017)</li>
+        <li>The Lego Ninjago Movie (2017)</li>
+        <li>The Lego Movie 2: The Second Part (2019)</li>
+      </ul>
+      <div class="notes">No additional notes available.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Toy Story</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Toy Story (1995)</li>
+        <li>Toy Story 2 (1999)</li>
+        <li>Toy Story 3 (2010)</li>
+        <li>Toy Story 4 (2019)</li>
+      </ul>
+      <div class="notes">No additional notes available.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">The Conjuring Universe</summary>
+    <section class="movie-list">
+      <ul>
+        <li>The Nun (2018)</li>
+        <li>The Nun II (2023)</li>
+        <li>Annabelle: Creation (2017)</li>
+        <li>Annabelle (2014)</li>
+        <li>Annabelle Comes Home (2019)</li>
+        <li>The Conjuring (2013)</li>
+        <li>The Curse of La Llorona (2019)</li>
+        <li>The Conjuring 2 (2016)</li>
+        <li>The Conjuring: The Devil Made Me Do It (2021)</li>
+        <li>The Conjuring: Last Rites (2025) – Upcoming</li>
+        <li>The Conjuring Universe TV Series (TBA) – Upcoming</li>
+      </ul>
+      <div class="notes">The Conjuring Universe focuses on paranormal investigators Ed and Lorraine Warren, with spin-offs exploring demonic entities like Annabelle and Valak. The Curse of La Llorona is a disputed entry but included due to connections. The Conjuring: Last Rites (September 5, 2025) is the finale of the main series’ first phase, with a Max TV series in development.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Saw</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Saw (2004)</li>
+        <li>Saw II (2005)</li>
+        <li>Saw III (2006)</li>
+        <li>Saw IV (2007)</li>
+        <li>Saw V (2008)</li>
+        <li>Saw VI (2009)</li>
+        <li>Saw 3D (2010)</li>
+        <li>Jigsaw (2017)</li>
+        <li>Spiral: From the Book of Saw (2021)</li>
+        <li>Saw X (2023)</li>
+        <li>Saw XI (2025) – Upcoming</li>
+      </ul>
+      <div class="notes">The Saw franchise is known for its intricate traps and Jigsaw’s moral tests. Saw XI is set for release on September 26, 2025.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Indiana Jones</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Raiders of the Lost Ark (1981)</li>
+        <li>Indiana Jones and the Temple of Doom (1984)</li>
+        <li>Indiana Jones and the Last Crusade (1989)</li>
+        <li>Indiana Jones and the Kingdom of the Crystal Skull (2008)</li>
+        <li>Indiana Jones and the Dial of Destiny (2023)</li>
+      </ul>
+      <div class="notes">No additional notes available.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Terminator</summary>
+    <section class="movie-list">
+      <ul>
+        <li>The Terminator (1984)</li>
+        <li>Terminator 2: Judgment Day (1991)</li>
+        <li>Terminator 3: Rise of the Machines (2003)</li>
+        <li>Terminator Salvation (2009)</li>
+        <li>Terminator Genisys (2015)</li>
+        <li>Terminator: Dark Fate (2019)</li>
+      </ul>
+      <div class="notes">No additional notes available.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Planet of the Apes</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Planet of the Apes (1968)</li>
+        <li>Beneath the Planet of the Apes (1970)</li>
+        <li>Escape from the Planet of the Apes (1971)</li>
+        <li>Conquest of the Planet of the Apes (1972)</li>
+        <li>Battle for the Planet of the Apes (1973)</li>
+        <li>Planet of the Apes (2001)</li>
+        <li>Rise of the Planet of the Apes (2011)</li>
+        <li>Dawn of the Planet of the Apes (2014)</li>
+        <li>War for the Planet of the Apes (2017)</li>
+        <li>Kingdom of the Planet of the Apes (2024)</li>
+        <li>Untitled Planet of the Apes Film (TBA) – Upcoming</li>
+      </ul>
+      <div class="notes">The modern reboot series began with Rise of the Planet of the Apes (2011). A fifth film in the reboot series is in development.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Mad Max</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Mad Max (1979)</li>
+        <li>Mad Max 2: The Road Warrior (1981)</li>
+        <li>Mad Max Beyond Thunderdome (1985)</li>
+        <li>Mad Max: Fury Road (2015)</li>
+        <li>Furiosa: A Mad Max Saga (2024)</li>
+      </ul>
+      <div class="notes">No additional notes available.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Knives Out</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Knives Out (2019)</li>
+        <li>Glass Onion: A Knives Out Mystery (2022)</li>
+        <li>Wake Up Dead Man: A Knives Out Mystery (2025)</li>
+      </ul>
+      <div class="notes">Each film features a new case with Detective Benoit Blanc (Daniel Craig). Wake Up Dead Man, released May 2025, includes Josh Brolin, Mila Kunis, and Glenn Close.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Final Destination</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Final Destination (2000)</li>
+        <li>Final Destination 2 (2003)</li>
+        <li>Final Destination 3 (2006)</li>
+        <li>The Final Destination (2009)</li>
+        <li>Final Destination 5 (2011)</li>
+        <li>Final Destination: Bloodlines (2025)</li>
+      </ul>
+      <div class="notes">Final Destination: Bloodlines, released May 16, 2025, celebrates the franchise’s 25th anniversary, focusing on first responders.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Tron</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Tron (1982)</li>
+        <li>Tron: Legacy (2010)</li>
+        <li>Tron: Ares (2025) – Upcoming</li>
+      </ul>
+      <div class="notes">Tron: Ares, set for October 10, 2025, is a standalone sequel starring Jared Leto and Jeff Bridges, reversing the narrative by sending a digital figure into the real world.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Jaws</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Jaws (1975)</li>
+        <li>Jaws 2 (1978)</li>
+        <li>Jaws 3-D (1983)</li>
+        <li>Jaws: The Revenge (1987)</li>
+      </ul>
+      <div class="notes">No new films are planned, but the franchise remains iconic, with all four films available on Peacock in June 2025.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Fifty Shades</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Fifty Shades of Grey (2015)</li>
+        <li>Fifty Shades Darker (2017)</li>
+        <li>Fifty Shades Freed (2018)</li>
+      </ul>
+      <div class="notes">All three films are available on Peacock in June 2025. No upcoming projects announced.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Bridget Jones</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Bridget Jones’s Diary (2001)</li>
+        <li>Bridget Jones: The Edge of Reason (2004)</li>
+        <li>Bridget Jones’s Baby (2016)</li>
+        <li>Bridget Jones: Mad About the Boy (2025)</li>
+      </ul>
+      <div class="notes">Bridget Jones: Mad About the Boy, released February 14, 2025, on Peacock, features Renée Zellweger and introduces Leo Woodall as a younger love interest.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Karate Kid</summary>
+    <section class="movie-list">
+      <ul>
+        <li>The Karate Kid (1984)</li>
+        <li>The Karate Kid Part II (1986)</li>
+        <li>The Karate Kid Part III (1989)</li>
+        <li>The Next Karate Kid (1994)</li>
+        <li>The Karate Kid (2010)</li>
+        <li>Karate Kid: Legends (2025)</li>
+      </ul>
+      <div class="notes">Karate Kid: Legends, released May 30, 2025, stars Ralph Macchio and Jackie Chan, bridging the original and 2010 reboot.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Insidious</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Insidious (2010)</li>
+        <li>Insidious: Chapter 2 (2013)</li>
+        <li>Insidious: Chapter 3 (2015)</li>
+        <li>Insidious: The Last Key (2018)</li>
+        <li>Insidious: The Red Door (2023)</li>
+        <li>Thread: An Insidious Tale (2025) – Upcoming</li>
+      </ul>
+      <div class="notes">Thread: An Insidious Tale, set for August 29, 2025, is a spin-off starring Kumail Nanjiani and Mandy Moore, exploring a new family’s supernatural struggles.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Zootopia</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Zootopia (2016)</li>
+        <li>Zootopia 2 (2025) – Upcoming</li>
+      </ul>
+      <div class="notes">Zootopia 2, set for November 26, 2025, continues the adventures of Nick Wilde and Judy Hopps.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">How to Train Your Dragon</summary>
+    <section class="movie-list">
+      <ul>
+        <li>How to Train Your Dragon (2010)</li>
+        <li>How to Train Your Dragon 2 (2014)</li>
+        <li>How to Train Your Dragon: The Hidden World (2019)</li>
+        <li>How to Train Your Dragon (2025) – Live-Action</li>
+      </ul>
+      <div class="notes">The live-action How to Train Your Dragon, released June 13, 2025, is directed by Dean DeBlois and adapts the original story.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Alien</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Alien (1979)</li>
+        <li>Aliens (1986)</li>
+        <li>Alien 3 (1992)</li>
+        <li>Alien: Resurrection (1997)</li>
+        <li>Prometheus (2012)</li>
+        <li>Alien: Covenant (2017)</li>
+        <li>Alien: Romulus (2024)</li>
+      </ul>
+      <div class="notes">The Alien franchise is known for its sci-fi horror, focusing on the Xenomorph and human encounters. Alien: Romulus (2024) is the latest entry, set between Alien and Aliens.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Ghostbusters</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Ghostbusters (1984)</li>
+        <li>Ghostbusters II (1989)</li>
+        <li>Ghostbusters (2016)</li>
+        <li>Ghostbusters: Afterlife (2021)</li>
+        <li>Ghostbusters: Frozen Empire (2024)</li>
+      </ul>
+      <div class="notes">The Ghostbusters franchise blends comedy and supernatural action. The 2016 film is a reboot, while Afterlife and Frozen Empire continue the original timeline.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">M3GAN</summary>
+    <section class="movie-list">
+      <ul>
+        <li>M3GAN (2023)</li>
+        <li>M3GAN 2.0 (2025)</li>
+      </ul>
+      <div class="notes">M3GAN is a sci-fi horror franchise about a killer AI doll. M3GAN 2.0, released June 27, 2025, continues the story with new technological threats.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">28 Days Later</summary>
+    <section class="movie-list">
+      <ul>
+        <li>28 Days Later (2002)</li>
+        <li>28 Weeks Later (2007)</li>
+        <li>28 Years Later (2025)</li>
+      </ul>
+      <div class="notes">The 28 Days Later franchise is known for its fast-moving infected and post-apocalyptic setting. 28 Years Later, released June 20, 2025, is the third installment.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Resident Evil</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Resident Evil (2002)</li>
+        <li>Resident Evil: Apocalypse (2004)</li>
+        <li>Resident Evil: Extinction (2007)</li>
+        <li>Resident Evil: Afterlife (2010)</li>
+        <li>Resident Evil: Retribution (2012)</li>
+        <li>Resident Evil: The Final Chapter (2016)</li>
+        <li>Resident Evil: Welcome to Raccoon City (2021)</li>
+      </ul>
+      <div class="notes">Based on the video game series, Resident Evil focuses on zombie outbreaks and Umbrella Corporation. Welcome to Raccoon City (2021) is a reboot.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Underworld</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Underworld (2003)</li>
+        <li>Underworld: Evolution (2006)</li>
+        <li>Underworld: Rise of the Lycans (2009)</li>
+        <li>Underworld: Awakening (2012)</li>
+        <li>Underworld: Blood Wars (2016)</li>
+      </ul>
+      <div class="notes">The Underworld franchise centers on the war between vampires and Lycans. No new films are confirmed as of June 2025.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Bourne</summary>
+    <section class="movie-list">
+      <ul>
+        <li>The Bourne Identity (2002)</li>
+        <li>The Bourne Supremacy (2004)</li>
+        <li>The Bourne Ultimatum (2007)</li>
+        <li>The Bourne Legacy (2012)</li>
+        <li>Jason Bourne (2016)</li>
+        <li>Untitled Bourne 6 (TBA) – Upcoming</li>
+      </ul>
+      <div class="notes">The Bourne franchise follows amnesiac spy Jason Bourne, with The Bourne Legacy featuring a different protagonist. A sixth film is in development.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Star Trek</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Star Trek: The Motion Picture (1979)</li>
+        <li>Star Trek II: The Wrath of Khan (1982)</li>
+        <li>Star Trek III: The Search for Spock (1984)</li>
+        <li>Star Trek IV: The Voyage Home (1986)</li>
+        <li>Star Trek V: The Final Frontier (1989)</li>
+        <li>Star Trek VI: The Undiscovered Country (1991)</li>
+        <li>Star Trek: Generations (1994)</li>
+        <li>Star Trek: First Contact (1996)</li>
+        <li>Star Trek: Insurrection (1998)</li>
+        <li>Star Trek: Nemesis (2002)</li>
+        <li>Star Trek (2009) – Reboot</li>
+        <li>Star Trek Into Darkness (2013)</li>
+        <li>Star Trek Beyond (2016)</li>
+      </ul>
+      <div class="notes">Original series timeline and rebooted Kelvin timeline coexist.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Lilo & Stitch</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Lilo & Stitch (2002) – Animated</li>
+        <li>Lilo & Stitch (2025) – Live-Action</li>
+      </ul>
+      <div class="notes">The live-action remake, released May 23, 2025, reimagines the story of a Hawaiian girl and her alien friend Stitch, starring Maia Kealoha and Sydney Agudong.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">The Bad Guys</summary>
+    <section class="movie-list">
+      <ul>
+        <li>The Bad Guys (2022) – Animated</li>
+        <li>The Bad Guys 2 (2025) – Animated</li>
+      </ul>
+      <div class="notes">The Bad Guys 2, released August 2025, continues the heist adventures of reformed criminals in a DreamWorks animated series.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Now You See Me</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Now You See Me (2013)</li>
+        <li>Now You See Me 2 (2016)</li>
+        <li>Now You See Me 3 (2025)</li>
+      </ul>
+      <div class="notes">Now You See Me 3, released November 2025, continues the heist thriller series centered on magicians performing elaborate cons.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Five Nights at Freddy’s</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Five Nights at Freddy’s (2023)</li>
+        <li>Five Nights at Freddy’s 2 (2025)</li>
+      </ul>
+      <div class="notes">Based on the horror video game, Five Nights at Freddy’s 2, released December 2025, continues the animatronic horror at a haunted pizzeria.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Sonic the Hedgehog</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Sonic the Hedgehog (2020)</li>
+        <li>Sonic the Hedgehog 2 (2022)</li>
+        <li>Sonic the Hedgehog 3 (2024)</li>
+      </ul>
+      <div class="notes">Based on the video game, this franchise follows Sonic’s action-packed adventures, with the third film released in 2024.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Back to the Future</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Back to the Future (1985)</li>
+        <li>Back to the Future Part II (1989)</li>
+        <li>Back to the Future Part III (1990)</li>
+      </ul>
+      <div class="notes">A sci-fi classic trilogy about time travel starring Michael J. Fox and Christopher Lloyd. No new films are planned as of June 2025.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">The Godfather</summary>
+    <section class="movie-list">
+      <ul>
+        <li>The Godfather (1972)</li>
+        <li>The Godfather Part II (1974)</li>
+        <li>The Godfather Part III (1990)</li>
+      </ul>
+      <div class="notes">Francis Ford Coppola’s crime saga is a cinematic landmark. No new films are planned as of June 2025.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Superman (Standalone, Non-DCEU)</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Superman (1978)</li>
+        <li>Superman II (1980)</li>
+        <li>Superman III (1983)</li>
+        <li>Superman IV: The Quest for Peace (1987)</li>
+        <li>Superman Returns (2006)</li>
+        <li>Superman (2025)</li>
+      </ul>
+      <div class="notes">The 2025 film, released July 2025, directed by James Gunn and starring David Corenswet, reboots the DC Universe, distinct from the DCEU.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">Wicked</summary>
+    <section class="movie-list">
+      <ul>
+        <li>Wicked (2024)</li>
+        <li>Wicked: For Good (2025)</li>
+      </ul>
+      <div class="notes">Adapted from the Broadway musical, Wicked: For Good, released November 2025, stars Cynthia Erivo and Ariana Grande, concluding the story.</div>
+    </section>
+  </details>
+
+  <details class="franchise">
+    <summary tabindex="0">The Fantastic Four</summary>
+    <section class="movie-list">
+      <ul>
+        <li>The Fantastic Four (1994) – Unreleased</li>
+        <li>Fantastic Four (2005)</li>
+        <li>Fantastic Four: Rise of the Silver Surfer (2007)</li>
+        <li>Fantastic Four (2015)</li>
+        <li>The Fantastic Four: First Steps (2025)</li>
+      </ul>
+      <div class="notes">The 2025 MCU reboot, released July 2025, directed by Matt Shakman and starring Pedro Pascal and Vanessa Kirby, launches Marvel’s Phase 6.</div>
+    </section>
+  </details>
+  
+  <details class="franchise">
+  <summary tabindex="0">Monsterverse</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Godzilla (2014)</li>
+      <li>Kong: Skull Island (2017)</li>
+      <li>Godzilla: King of the Monsters (2019)</li>
+      <li>Godzilla vs. Kong (2021)</li>
+      <li>Godzilla x Kong: The New Empire (2024)</li>
+    </ul>
+    <div class="notes">A shared universe featuring Godzilla, King Kong, and other Titans, produced by Legendary Pictures. The 2024 release keeps the franchise active with strong fan interest.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Dune</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Dune (1984)</li>
+      <li>Dune: Part One (2021)</li>
+      <li>Dune: Part Two (2024)</li>
+      <li>Dune: Prophecy (2024) – TV Series</li>
+    </ul>
+    <div class="notes">Denis Villeneuve’s adaptation of Frank Herbert’s novel has revitalized the franchise, with a third film in development and the TV series expanding the universe.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Scream</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Scream (1996)</li>
+      <li>Scream 2 (1997)</li>
+      <li>Scream 3 (2000)</li>
+      <li>Scream 4 (2011)</li>
+      <li>Scream (2022)</li>
+      <li>Scream VI (2023)</li>
+    </ul>
+    <div class="notes">The horror franchise centered on Ghostface killings. Its recent revival with the 2022 and 2023 films keeps it relevant, with strong fan support.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">The Chronicles of Narnia</summary>
+  <section class="movie-list">
+    <ul>
+      <li>The Chronicles of Narnia: The Lion, the Witch and the Wardrobe (2005)</li>
+      <li>The Chronicles of Narnia: Prince Caspian (2008)</li>
+      <li>The Chronicles of Narnia: The Voyage of the Dawn Treader (2010)</li>
+    </ul>
+    <div class="notes">Based on C.S. Lewis’ books, this fantasy series is iconic. Netflix is developing a reboot, though no releases are confirmed by June 2025.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Rocky</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Rocky (1976)</li>
+      <li>Rocky II (1979)</li>
+      <li>Rocky III (1982)</li>
+      <li>Rocky IV (1985)</li>
+      <li>Rocky V (1990)</li>
+      <li>Rocky Balboa (2006)</li>
+      <li>Creed (2015)</li>
+      <li>Creed II (2018)</li>
+      <li>Creed III (2023)</li>
+    </ul>
+    <div class="notes">The Rocky franchise, including the Creed spin-offs, follows boxer Rocky Balboa and Adonis Creed. The Creed series keeps it relevant, though no 2025 releases are confirmed.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Die Hard</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Die Hard (1988)</li>
+      <li>Die Hard 2 (1990)</li>
+      <li>Die Hard with a Vengeance (1995)</li>
+      <li>Live Free or Die Hard (2007)</li>
+      <li>A Good Day to Die Hard (2013)</li>
+    </ul>
+    <div class="notes">The action series starring Bruce Willis as John McClane is a cultural touchstone. No new films are planned as of June 2025.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Ice Age</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Ice Age (2002)</li>
+      <li>Ice Age: The Meltdown (2006)</li>
+      <li>Ice Age: Dawn of the Dinosaurs (2009)</li>
+      <li>Ice Age: Continental Drift (2012)</li>
+      <li>Ice Age: Collision Course (2016)</li>
+    </ul>
+    <div class="notes">An animated franchise about prehistoric animals, popular with families. No new films are confirmed as of June 2025.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Halloween</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Halloween (1978)</li>
+      <li>Halloween II (1981)</li>
+      <li>Halloween III: Season of the Witch (1982)</li>
+      <li>Halloween 4: The Return of Michael Myers (1988)</li>
+      <li>Halloween 5: The Revenge of Michael Myers (1989)</li>
+      <li>Halloween: The Curse of Michael Myers (1995)</li>
+      <li>Halloween H20: 20 Years Later (1998)</li>
+      <li>Halloween: Resurrection (2002)</li>
+      <li>Halloween (2007) – Rob Zombie Reboot</li>
+      <li>Halloween II (2009)</li>
+      <li>Halloween (2018)</li>
+      <li>Halloween Kills (2021)</li>
+      <li>Halloween Ends (2022)</li>
+    </ul>
+    <div class="notes">The horror franchise centered on Michael Myers. The 2018–2022 trilogy rebooted the series, ignoring earlier sequels.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Kung Fu Panda</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Kung Fu Panda (2008)</li>
+      <li>Kung Fu Panda 2 (2011)</li>
+      <li>Kung Fu Panda 3 (2016)</li>
+      <li>Kung Fu Panda 4 (2024)</li>
+    </ul>
+    <div class="notes">DreamWorks’ animated series about Po the panda. The 2024 release ensures its current relevance.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">The Expendables</summary>
+  <section class="movie-list">
+    <ul>
+      <li>The Expendables (2010)</li>
+      <li>The Expendables 2 (2012)</li>
+      <li>The Expendables 3 (2014)</li>
+      <li>Expend4bles (2023)</li>
+    </ul>
+    <div class="notes">An action franchise featuring an ensemble of action stars like Sylvester Stallone and Jason Statham. The 2023 release keeps it relevant, though no 2025 films are confirmed.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">The Maze Runner</summary>
+  <section class="movie-list">
+    <ul>
+      <li>The Maze Runner (2014)</li>
+      <li>Maze Runner: The Scorch Trials (2015)</li>
+      <li>Maze Runner: The Death Cure (2018)</li>
+    </ul>
+    <div class="notes">A dystopian sci-fi series based on James Dashner’s novels. No new films are planned, but its young adult fanbase keeps it relevant.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Tremors</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Tremors (1990)</li>
+      <li>Tremors 2: Aftershocks (1996)</li>
+      <li>Tremors 3: Back to Perfection (2001)</li>
+      <li>Tremors 4: The Legend Begins (2004)</li>
+      <li>Tremors 5: Bloodlines (2015)</li>
+      <li>Tremors: A Cold Day in Hell (2018)</li>
+      <li>Tremors: Shrieker Island (2020)</li>
+    </ul>
+    <div class="notes">A cult horror-comedy series about giant underground monsters. No 2025 releases are confirmed, but its seven-film run and fanbase make it notable.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Divergent</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Divergent (2014)</li>
+      <li>Insurgent (2015)</li>
+      <li>Allegiant (2016)</li>
+    </ul>
+    <div class="notes">A dystopian young adult series based on Veronica Roth’s novels. The trilogy concluded without a planned continuation, but its popularity persists.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">The Equalizer</summary>
+  <section class="movie-list">
+    <ul>
+      <li>The Equalizer (2014)</li>
+      <li>The Equalizer 2 (2018)</li>
+      <li>The Equalizer 3 (2023)</li>
+    </ul>
+    <div class="notes">An action series starring Denzel Washington as a vigilante. The 2023 release keeps it current, with no confirmed 2025 projects.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Taken</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Taken (2008)</li>
+      <li>Taken 2 (2012)</li>
+      <li>Taken 3 (2014)</li>
+    </ul>
+    <div class="notes">An action thriller series starring Liam Neeson as a former CIA operative. No new films are planned, but its cultural impact as an action staple remains.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Rush Hour</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Rush Hour (1998)</li>
+      <li>Rush Hour 2 (2001)</li>
+      <li>Rush Hour 3 (2007)</li>
+    </ul>
+    <div class="notes">A buddy-cop action-comedy series starring Jackie Chan and Chris Tucker. Talks of a fourth film persist, but nothing is confirmed for 2025.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Beverly Hills Cop</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Beverly Hills Cop (1984)</li>
+      <li>Beverly Hills Cop II (1987)</li>
+      <li>Beverly Hills Cop III (1994)</li>
+      <li>Beverly Hills Cop: Axel F (2024)</li>
+    </ul>
+    <div class="notes">An action-comedy series starring Eddie Murphy as Axel Foley. The 2024 Netflix release revived the franchise, making it a timely addition.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">A Nightmare on Elm Street</summary>
+  <section class="movie-list">
+    <ul>
+      <li>A Nightmare on Elm Street (1984)</li>
+      <li>A Nightmare on Elm Street 2: Freddy’s Revenge (1985)</li>
+      <li>A Nightmare on Elm Street 3: Dream Warriors (1987)</li>
+      <li>A Nightmare on Elm Street 4: The Dream Master (1988)</li>
+      <li>A Nightmare on Elm Street 5: The Dream Child (1989)</li>
+      <li>Freddy’s Dead: The Final Nightmare (1991)</li>
+      <li>Wes Craven’s New Nightmare (1994)</li>
+      <li>Freddy vs. Jason (2003)</li>
+      <li>A Nightmare on Elm Street (2010) – Reboot</li>
+    </ul>
+    <div class="notes">A horror franchise featuring Freddy Krueger. No 2025 releases are confirmed, but its horror legacy and fanbase make it a strong candidate.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">The Hangover</summary>
+  <section class="movie-list">
+    <ul>
+      <li>The Hangover (2009)</li>
+      <li>The Hangover Part II (2011)</li>
+      <li>The Hangover Part III (2013)</li>
+    </ul>
+    <div class="notes">A comedy series about a group of friends dealing with wild misadventures. No new films are planned, but its popularity endures.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">After</summary>
+  <section class="movie-list">
+    <ul>
+      <li>After (2019)</li>
+      <li>After We Collided (2020)</li>
+      <li>After We Fell (2021)</li>
+      <li>After Ever Happy (2022)</li>
+      <li>After Everything (2023)</li>
+    </ul>
+    <div class="notes">A romantic drama series based on Anna Todd’s novels, focusing on a tumultuous love story. The 2023 release keeps it current.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">365 Days</summary>
+  <section class="movie-list">
+    <ul>
+      <li>365 Days (2020)</li>
+      <li>365 Days: This Day (2022)</li>
+      <li>The Next 365 Days (2022)</li>
+    </ul>
+    <div class="notes">A romantic thriller series based on Blanka Lipińska’s novels, known for its controversial themes. No 2025 releases are confirmed.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Fifty Shades</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Fifty Shades of Grey (2015)</li>
+      <li>Fifty Shades Darker (2017)</li>
+      <li>Fifty Shades Freed (2018)</li>
+    </ul>
+    <div class="notes">A romantic drama series based on E.L. James’ novels, focusing on a complex relationship. No new films are planned, but its cultural impact persists.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">American Pie</summary>
+  <section class="movie-list">
+    <ul>
+      <li>American Pie (1999)</li>
+      <li>American Pie 2 (2001)</li>
+      <li>American Wedding (2003)</li>
+      <li>American Reunion (2012)</li>
+    </ul>
+    <div class="notes">A teen comedy series centered on a group of friends navigating relationships and mishaps. No 2025 releases are confirmed, but its nostalgic appeal endures.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Independence Day</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Independence Day (1996)</li>
+      <li>Independence Day: Resurgence (2016)</li>
+    </ul>
+    <div class="notes">A sci-fi action series about humanity battling alien invasions. No new films are confirmed, but its iconic status makes it notable.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Crank</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Crank (2006)</li>
+      <li>Crank: High Voltage (2009)</li>
+    </ul>
+    <div class="notes">A high-octane action series starring Jason Statham as a hitman who must keep his adrenaline up to survive. No new films are planned.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Transporter</summary>
+  <section class="movie-list">
+    <ul>
+      <li>The Transporter (2002)</li>
+      <li>Transporter 2 (2005)</li>
+      <li>Transporter 3 (2008)</li>
+      <li>The Transporter Refueled (2015)</li>
+    </ul>
+    <div class="notes">An action series starring Jason Statham as a professional driver for hire. The 2015 reboot extended the franchise, but no 2025 releases are confirmed.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">The Mechanic</summary>
+  <section class="movie-list">
+    <ul>
+      <li>The Mechanic (1972)</li>
+      <li>The Mechanic (2011)</li>
+      <li>Mechanic: Resurrection (2016)</li>
+    </ul>
+    <div class="notes">An action series about a skilled hitman, with the 2011 film as a remake of the 1972 original. No new films are planned as of June 2025.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">The Mummy</summary>
+  <section class="movie-list">
+    <ul>
+      <li>The Mummy (1999)</li>
+      <li>The Mummy Returns (2001)</li>
+      <li>The Mummy: Tomb of the Dragon Emperor (2008)</li>
+      <li>The Mummy (2017) – Reboot</li>
+    </ul>
+    <div class="notes">An action-adventure series about ancient curses and treasure hunters. The 2017 reboot attempted to launch a Dark Universe, but no 2025 releases are confirmed.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Evil Dead</summary>
+  <section class="movie-list">
+    <ul>
+      <li>The Evil Dead (1981)</li>
+      <li>Evil Dead II (1987)</li>
+      <li>Army of Darkness (1992)</li>
+      <li>Evil Dead (2013) – Reboot</li>
+      <li>Evil Dead Rise (2023)</li>
+    </ul>
+    <div class="notes">A horror franchise blending gore and dark humor, centered on the Necronomicon and demonic forces. The 2023 release keeps it active and popular.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Blade Runner</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Blade Runner (1982)</li>
+      <li>Blade Runner 2049 (2017)</li>
+      <li>Blade Runner 2099 (TBA) – TV Series</li>
+    </ul>
+    <div class="notes">A sci-fi franchise based on Philip K. Dick’s novel, known for its dystopian themes. The TV series is in development, but no 2025 release is confirmed.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">The Purge</summary>
+  <section class="movie-list">
+    <ul>
+      <li>The Purge (2013)</li>
+      <li>The Purge: Anarchy (2014)</li>
+      <li>The Purge: Election Year (2016)</li>
+      <li>The First Purge (2018)</li>
+      <li>The Forever Purge (2021)</li>
+    </ul>
+    <div class="notes">A dystopian horror-action series about a night of legalized crime. No 2025 releases are confirmed, but its social commentary and fanbase make it notable.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Paranormal Activity</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Paranormal Activity (2007)</li>
+      <li>Paranormal Activity 2 (2010)</li>
+      <li>Paranormal Activity 3 (2011)</li>
+      <li>Paranormal Activity 4 (2012)</li>
+      <li>Paranormal Activity: The Marked Ones (2014)</li>
+      <li>Paranormal Activity: The Ghost Dimension (2015)</li>
+      <li>Paranormal Activity: Next of Kin (2021)</li>
+    </ul>
+    <div class="notes">A found-footage horror series about supernatural hauntings. No new films are planned, but its low-budget success and horror legacy are significant.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Cloverfield</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Cloverfield (2008)</li>
+      <li>10 Cloverfield Lane (2016)</li>
+      <li>The Cloverfield Paradox (2018)</li>
+    </ul>
+    <div class="notes">A sci-fi horror anthology series with loosely connected stories about alien threats. No 2025 releases are confirmed, but its unique marketing and fan interest keep it relevant.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Pitch Perfect</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Pitch Perfect (2012)</li>
+      <li>Pitch Perfect 2 (2015)</li>
+      <li>Pitch Perfect 3 (2017)</li>
+    </ul>
+    <div class="notes">A musical comedy series about an a cappella group. No new films are planned, but its popularity with younger audiences and cultural impact make it a candidate.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Rambo</summary>
+  <section class="movie-list">
+    <ul>
+      <li>First Blood (1982)</li>
+      <li>Rambo: First Blood Part II (1985)</li>
+      <li>Rambo III (1988)</li>
+      <li>Rambo (2008)</li>
+      <li>Rambo: Last Blood (2019)</li>
+    </ul>
+    <div class="notes">An action series starring Sylvester Stallone as John Rambo. The 2019 release was the latest, with no 2025 projects confirmed.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Ocean’s</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Ocean’s Eleven (2001)</li>
+      <li>Ocean’s Twelve (2004)</li>
+      <li>Ocean’s Thirteen (2007)</li>
+      <li>Ocean’s 8 (2018)</li>
+    </ul>
+    <div class="notes">A heist comedy-drama series about elaborate cons. A prequel is in development, but no 2025 release is confirmed.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Predator</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Predator (1987)</li>
+      <li>Predator 2 (1990)</li>
+      <li>Predators (2010)</li>
+      <li>The Predator (2018)</li>
+      <li>Prey (2022)</li>
+    </ul>
+    <div class="notes">A sci-fi action franchise about an alien hunter. Prey (2022) revitalized the series, with a new film, Badlands, planned for 2025 but no confirmed release date.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Child’s Play</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Child’s Play (1988)</li>
+      <li>Child’s Play 2 (1990)</li>
+      <li>Child’s Play 3 (1991)</li>
+      <li>Bride of Chucky (1998)</li>
+      <li>Seed of Chucky (2004)</li>
+      <li>Curse of Chucky (2013)</li>
+      <li>Cult of Chucky (2017)</li>
+      <li>Child’s Play (2019) – Reboot</li>
+    </ul>
+    <div class="notes">A horror series about the killer doll Chucky. A TV series, Chucky (2021–2024), extended the franchise, but no 2025 films are confirmed.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Bad Boys</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Bad Boys (1995)</li>
+      <li>Bad Boys II (2003)</li>
+      <li>Bad Boys for Life (2020)</li>
+      <li>Bad Boys: Ride or Die (2024)</li>
+    </ul>
+    <div class="notes">An action-comedy buddy-cop series starring Will Smith and Martin Lawrence. The 2024 release keeps it current and popular.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Step Up</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Step Up (2006)</li>
+      <li>Step Up 2: The Streets (2008)</li>
+      <li>Step Up 3D (2010)</li>
+      <li>Step Up Revolution (2012)</li>
+      <li>Step Up: All In (2014)</li>
+    </ul>
+    <div class="notes">A dance-focused romantic drama series popular for its choreography. No 2025 releases are confirmed, but its fanbase among younger audiences makes it notable.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Hostel</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Hostel (2005)</li>
+      <li>Hostel: Part II (2007)</li>
+      <li>Hostel: Part III (2011)</li>
+    </ul>
+    <div class="notes">A horror series known for its extreme gore and torture themes. No new films are planned, but its cult status in the horror community is significant.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">The Texas Chainsaw Massacre</summary>
+  <section class="movie-list">
+    <ul>
+      <li>The Texas Chain Saw Massacre (1974)</li>
+      <li>The Texas Chainsaw Massacre 2 (1986)</li>
+      <li>Leatherface: The Texas Chainsaw Massacre III (1990)</li>
+      <li>Texas Chainsaw Massacre: The Next Generation (1995)</li>
+      <li>The Texas Chainsaw Massacre (2003)</li>
+      <li>The Texas Chainsaw Massacre: The Beginning (2006)</li>
+      <li>Texas Chainsaw 3D (2013)</li>
+      <li>Leatherface (2017)</li>
+      <li>Texas Chainsaw Massacre (2022)</li>
+    </ul>
+    <div class="notes">A horror franchise centered on Leatherface and his cannibalistic family. The 2022 Netflix release keeps it relevant, with no 2025 films confirmed.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Hellraiser</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Hellraiser (1987)</li>
+      <li>Hellbound: Hellraiser II (1988)</li>
+      <li>Hellraiser III: Hell on Earth (1992)</li>
+      <li>Hellraiser: Bloodline (1996)</li>
+      <li>Hellraiser: Inferno (2000)</li>
+      <li>Hellraiser: Hellseeker (2002)</li>
+      <li>Hellraiser: Deader (2005)</li>
+      <li>Hellraiser: Hellworld (2005)</li>
+      <li>Hellraiser: Revelations (2011)</li>
+      <li>Hellraiser: Judgment (2018)</li>
+      <li>Hellraiser (2022)</li>
+    </ul>
+    <div class="notes">A horror series based on Clive Barker’s work, featuring the Cenobites. The 2022 Hulu reboot revitalized the franchise, but no 2025 releases are confirmed.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Magic Mike</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Magic Mike (2012)</li>
+      <li>Magic Mike XXL (2015)</li>
+      <li>Magic Mike’s Last Dance (2023)</li>
+    </ul>
+    <div class="notes">A drama-comedy series about male strippers, starring Channing Tatum. The 2023 release keeps it current, with no 2025 projects confirmed.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Lethal Weapon</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Lethal Weapon (1987)</li>
+      <li>Lethal Weapon 2 (1989)</li>
+      <li>Lethal Weapon 3 (1992)</li>
+      <li>Lethal Weapon 4 (1998)</li>
+    </ul>
+    <div class="notes">An action-comedy buddy-cop series starring Mel Gibson and Danny Glover. A fifth film has been discussed, but no 2025 release is confirmed.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">The Chronicles of Riddick</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Pitch Black (2000)</li>
+      <li>The Chronicles of Riddick (2004)</li>
+      <li>Riddick (2013)</li>
+    </ul>
+    <div class="notes">A sci-fi action series starring Vin Diesel as Riddick. No new films are confirmed, but its cult following makes it a candidate.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Home Alone</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Home Alone (1990)</li>
+      <li>Home Alone 2: Lost in New York (1992)</li>
+      <li>Home Alone 3 (1997)</li>
+      <li>Home Alone 4: Taking Back the House (2002)</li>
+      <li>Home Alone: The Holiday Heist (2012)</li>
+      <li>Home Sweet Home Alone (2021)</li>
+    </ul>
+    <div class="notes">A family-comedy series about kids outsmarting criminals. The 2021 Disney+ reboot extended the franchise, but no 2025 releases are confirmed.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">G.I. Joe</summary>
+  <section class="movie-list">
+    <ul>
+      <li>G.I. Joe: The Rise of Cobra (2009)</li>
+      <li>G.I. Joe: Retaliation (2013)</li>
+      <li>Snake Eyes: G.I. Joe Origins (2021)</li>
+    </ul>
+    <div class="notes">An action franchise based on the Hasbro toy line. No 2025 releases are confirmed, but its action appeal and fanbase make it notable.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Night at the Museum</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Night at the Museum (2006)</li>
+      <li>Night at the Museum: Battle of the Smithsonian (2009)</li>
+      <li>Night at the Museum: Secret of the Tomb (2014)</li>
+      <li>Night at the Museum: Kahmunrah Rises Again (2022) – Animated</li>
+    </ul>
+    <div class="notes">A family-comedy series about museum exhibits coming to life. The 2022 animated film extended the franchise, with no 2025 releases confirmed.</div>
+  </section>
+</details>
+
+<details class="franchise">
+  <summary tabindex="0">Scary Movie</summary>
+  <section class="movie-list">
+    <ul>
+      <li>Scary Movie (2000)</li>
+      <li>Scary Movie 2 (2001)</li>
+      <li>Scary Movie 3 (2003)</li>
+      <li>Scary Movie 4 (2006)</li>
+      <li>Scary Movie 5 (2013)</li>
+    </ul>
+    <div class="notes">A horror-comedy parody series spoofing popular horror films. No new films are planned, but its early 2000s cultural impact remains significant.</div>
+  </section>
+</details>
+
+  <footer>
+    <p>Credit: <a href="https://twitter.com/IncomingTimes" target="_blank" rel="noopener noreferrer">@IncomingTimes</a></p>
+  </footer>
+</body>
+</html>
